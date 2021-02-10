@@ -13,6 +13,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.webView.loadUrl("https://www.dicoding.com")
+        binding.webView.apply {
+            loadUrl("https://www.dicoding.com")
+            settings.javaScriptEnabled = true
+        }
     }
 }
